@@ -9,7 +9,7 @@ import checkFilePlugin from 'eslint-plugin-check-file';
 
 /**
  * ESLint Configuration for Next.js 16 with App Router
- * 
+ *
  * - TypeScript strict type checking
  * - React & React Hooks rules
  * - Import ordering and cycle detection
@@ -17,7 +17,7 @@ import checkFilePlugin from 'eslint-plugin-check-file';
  * - Prettier integration for consistent formatting
  * - KEBAB-CASE naming convention for files and folders
  * - Next.js-optimized rules (Image, Link components)
- * 
+ *
  * Next.js Best Practices Covered:
  * ✓ Use <Link> instead of <a> tags
  * ✓ Use <Image> instead of <img> tags
@@ -58,13 +58,13 @@ export default [
       // Import/Export rules
       'import/no-cycle': 'error',
       'linebreak-style': ['error', 'unix'],
-      
+
       // React rules optimized for Next.js
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off', // Not needed in Next.js
       'react/no-unescaped-entities': 'warn',
       'react/jsx-key': 'error',
-      
+
       // Accessibility - configured for Next.js Link component
       'jsx-a11y/anchor-is-valid': [
         'error',
@@ -81,7 +81,7 @@ export default [
           img: ['Image'],
         },
       ],
-      
+
       // Import ordering with Next.js priority
       'import/order': [
         'error',
@@ -116,7 +116,7 @@ export default [
       'import/no-named-as-default-member': 'off',
       'import/no-named-as-default': 'off',
       'import/no-anonymous-default-export': 'warn',
-      
+
       // TypeScript rules
       '@typescript-eslint/no-unused-vars': [
         'error',
@@ -130,15 +130,15 @@ export default [
       '@typescript-eslint/no-empty-function': ['off'],
       '@typescript-eslint/no-explicit-any': ['off'],
       '@typescript-eslint/no-var-requires': 'off',
-      
+
       // General best practices
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-unused-expressions': 'error',
-      
+
       // Prettier integration
       'prettier/prettier': ['error', {}, { usePrettierrc: true }],
-      
+
       // File naming conventions
       'check-file/filename-naming-convention': [
         'error',
@@ -161,8 +161,8 @@ export default [
     },
   },
   {
-    // Folder naming convention for app directory (Next.js App Router)
-    files: ['app/**/!(__tests__)/*'],
+    // Folder naming convention for src directory (Next.js App Router)
+    files: ['src/**/!(__tests__)/*'],
     plugins: {
       'check-file': checkFilePlugin,
     },

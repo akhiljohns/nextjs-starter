@@ -6,9 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint app --ignore-pattern .gitignore --fix",
+    "lint": "eslint src --ignore-pattern .gitignore --fix",
     "check-types": "tsc --project tsconfig.json --pretty --noEmit",
-    "format": "prettier --write ./app"
+    "format": "prettier --write ./src"
   },
   "dependencies": {
     "next": "16.0.4",
