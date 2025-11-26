@@ -17,6 +17,7 @@ import checkFilePlugin from 'eslint-plugin-check-file';
  * - Prettier integration for consistent formatting
  * - KEBAB-CASE naming convention for files and folders
  * - Next.js-optimized rules (Image, Link components)
+ * - Restricts deeply nested relative imports (max 1 level up)
  *
  * Next.js Best Practices Covered:
  * ✓ Use <Link> instead of <a> tags
@@ -25,6 +26,7 @@ import checkFilePlugin from 'eslint-plugin-check-file';
  * ✓ No React import needed (auto-imported)
  * ✓ Accessibility checks for Next.js components
  * ✓ Console warnings allowed for debugging
+ * ✓ Enforces @/ for cross-directory imports
  */
 
 export default [
@@ -116,6 +118,20 @@ export default [
       'import/no-named-as-default-member': 'off',
       'import/no-named-as-default': 'off',
       'import/no-anonymous-default-export': 'warn',
+
+      // Prevent deeply nested relative imports - use @/ instead
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['../**/..'],
+              message:
+                'Relative imports with more than one level (..) are not allowed. Use absolute imports with @/ instead.',
+            },
+          ],
+        },
+      ],
 
       // TypeScript rules
       '@typescript-eslint/no-unused-vars': [
