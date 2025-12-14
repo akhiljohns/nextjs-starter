@@ -6,6 +6,8 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import prettierPlugin from 'eslint-plugin-prettier';
 import checkFilePlugin from 'eslint-plugin-check-file';
+import tailwindCanonicalPlugin from 'eslint-plugin-tailwind-canonical-classes';
+
 
 /**
  * ESLint Configuration for Next.js 16 with App Router
@@ -55,6 +57,7 @@ export default [
       'jsx-a11y': jsxA11yPlugin,
       prettier: prettierPlugin,
       'check-file': checkFilePlugin,
+      'tailwind-canonical-classes': tailwindCanonicalPlugin,
     },
     rules: {
       // Import/Export rules
@@ -154,6 +157,14 @@ export default [
 
       // Prettier integration
       'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+
+      // Tailwind CSS canonical class names (v4)
+      'tailwind-canonical-classes/tailwind-canonical-classes': [
+        'warn',
+        {
+          cssPath: './src/app/globals.css',
+        },
+      ],
 
       // File naming conventions
       'check-file/filename-naming-convention': [
