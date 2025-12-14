@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
+    <div className="relative flex min-h-screen items-center justify-center bg-linear-to-br from-zinc-950 via-zinc-900 to-zinc-950">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-purple-500/20 blur-3xl animate-pulse" />
@@ -12,7 +12,7 @@ export default function Home() {
         <div className="mb-8 animate-fade-in">
           <h1 className="text-6xl font-bold tracking-tight text-white sm:text-7xl md:text-8xl">
             Next.js
-            <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Starter
             </span>
           </h1>
@@ -33,7 +33,7 @@ export default function Home() {
             className="group relative overflow-hidden rounded-lg bg-white px-8 py-4 font-semibold text-zinc-900 transition-all hover:scale-105 hover:shadow-xl hover:shadow-purple-500/50"
           >
             <span className="relative z-10">Get Started</span>
-            <div className="absolute inset-0 -z-0 bg-gradient-to-r from-purple-400 to-blue-400 opacity-0 transition-opacity group-hover:opacity-100" />
+            <div className="absolute inset-0 z-0 bg-linear-to-r from-purple-400 to-blue-400 opacity-0 transition-opacity group-hover:opacity-100" />
           </a>
           <a
             href="https://nextjs.org/docs"
