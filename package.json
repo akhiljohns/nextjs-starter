@@ -17,16 +17,19 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "src/**/*.{ts,tsx}": [
       "eslint --fix --max-warnings 0",
       "prettier --write",
       "bash -c 'tsc --noEmit'"
     ],
-    "*.{js,jsx}": [
+    "src/**/*.{js,jsx}": [
       "eslint --fix --max-warnings 0",
       "prettier --write"
     ],
     "*.{json,md,css}": [
+      "prettier --write"
+    ],
+    "*.config.{ts,js,mjs}": [
       "prettier --write"
     ]
   },
