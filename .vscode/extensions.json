@@ -1,0 +1,30 @@
+{
+  "recommendations": [
+    // Essential for ESLint support
+    "dbaeumer.vscode-eslint",
+
+    // Essential for Prettier support
+    "esbenp.prettier-vscode",
+
+    // TypeScript and React support
+    "ms-vscode.vscode-typescript-next",
+
+    // Tailwind CSS IntelliSense
+    "bradlc.vscode-tailwindcss",
+
+    // Path IntelliSense
+    "christian-kohler.path-intellisense",
+
+    // Auto import for TypeScript/React
+    "steoates.autoimport",
+
+    // Better comments
+    "aaron-bond.better-comments",
+
+    // Error Lens (shows errors inline)
+    "usernamehw.errorlens",
+
+    // GitLens (optional but helpful)
+    "eamodio.gitlens"
+  ]
+}

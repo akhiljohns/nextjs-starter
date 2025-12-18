@@ -8,7 +8,6 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import checkFilePlugin from 'eslint-plugin-check-file';
 import tailwindCanonicalPlugin from 'eslint-plugin-tailwind-canonical-classes';
 
-
 /**
  * ESLint Configuration for Next.js 16 with App Router
  *
@@ -167,13 +166,25 @@ export default [
       ],
 
       // File naming conventions
+      // File naming conventions - lowercase kebab-case only
       'check-file/filename-naming-convention': [
         'error',
         {
-          '**/*.{ts,tsx}': 'KEBAB_CASE',
+          '**/*.{ts,tsx,js,jsx}': 'KEBAB_CASE',
         },
         {
           ignoreMiddleExtensions: true,
+          // Allow Next.js special files and common patterns
+          ignore: [
+            '**/layout.tsx',
+            '**/page.tsx',
+            '**/loading.tsx',
+            '**/error.tsx',
+            '**/not-found.tsx',
+            '**/template.tsx',
+            '**/default.tsx',
+            '**/route.ts',
+          ],
         },
       ],
     },
@@ -189,7 +200,8 @@ export default [
   },
   {
     // Folder naming convention for src directory (Next.js App Router)
-    files: ['src/**/!(__tests__)/*'],
+    // Enforces lowercase kebab-case (no uppercase letters allowed)
+    files: ['src/**/*'],
     plugins: {
       'check-file': checkFilePlugin,
     },
@@ -197,7 +209,12 @@ export default [
       'check-file/folder-naming-convention': [
         'error',
         {
-          '**/*': 'KEBAB_CASE',
+          'src/**/': 'KEBAB_CASE',
+        },
+        {
+          // Ignore Next.js special folders and test folders
+          ignorePattern:
+            '^(app|api|__tests__|__mocks__|__fixtures__|node_modules|\\.next)$',
         },
       ],
     },
