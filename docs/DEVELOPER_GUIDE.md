@@ -1,6 +1,6 @@
 # 📖 Developer Guide
 
-Welcome to the Smart Campus Frontend project! This guide contains everything you need to know to get started and be productive.
+Welcome to the Next.js Starter project! This guide contains everything you need to know to get started and be productive.
 
 ---
 
@@ -96,7 +96,7 @@ A production-ready Next.js application with enterprise-grade tooling that enforc
 
    ```bash
    git clone <repository-url>
-   cd smart-campus-frontend
+   cd nextjs-starter
    ```
 
 2. **Install dependencies**

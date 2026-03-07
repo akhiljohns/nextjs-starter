@@ -1,4 +1,4 @@
-# Smart Campus Frontend
+# Next.js Starter
 
 A **production-ready** Next.js application with enterprise-grade tooling, strict quality gates, and comprehensive developer experience optimizations.
 
@@ -64,7 +64,7 @@ This is a modern web application built with Next.js 16, React 19, and TypeScript
 ## 📁 Project Structure
 
 ```
-smart-campus-frontend/
+nextjs-starter/
 ├── .vscode/                     # VS Code workspace settings
 │   ├── settings.json           # ESLint, Prettier, auto-fix on save
 │   └── extensions.json         # Recommended extensions
@@ -106,7 +106,7 @@ smart-campus-frontend/
 
    ```bash
    git clone <repository-url>
-   cd smart-campus-frontend
+   cd nextjs-starter
    ```
 
 2. **Install dependencies**
