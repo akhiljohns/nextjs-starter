@@ -65,7 +65,6 @@ This is a modern web application built with Next.js 16, React 19, and TypeScript
 
 ```
 smart-campus-frontend/
-├── .husky/                      # Git hooks (pre-commit)
 ├── .vscode/                     # VS Code workspace settings
 │   ├── settings.json           # ESLint, Prettier, auto-fix on save
 │   └── extensions.json         # Recommended extensions
@@ -335,8 +334,7 @@ This project works with any platform supporting Next.js:
 | `tsconfig.json`         | Strict TypeScript configuration    |
 | `next.config.ts`        | Next.js with build-time validation |
 | `.prettierrc`           | Code formatting rules              |
-| `.husky/pre-commit`     | Pre-commit hook script             |
-| `package.json`          | Scripts and lint-staged config     |
+| `package.json`          | Scripts and dependencies           |
 | `.vscode/settings.json` | VS Code workspace settings         |
 
 ---
@@ -362,13 +360,6 @@ This project works with any platform supporting Next.js:
 ---
 
 ## 🐛 Troubleshooting
-
-### Pre-commit hook not running?
-
-```bash
-pnpm run prepare
-chmod +x .husky/pre-commit
-```
 
 ### ESLint not showing in VS Code?
 

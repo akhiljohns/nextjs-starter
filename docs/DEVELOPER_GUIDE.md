@@ -440,23 +440,6 @@ pnpm run start
 5. **Reload VS Code**
    - `Cmd+Shift+P` → "Developer: Reload Window"
 
-### Pre-Commit Hook Not Running
-
-**Problem:** Can commit files with errors
-
-**Solutions:**
-
-```bash
-# Reinstall husky
-pnpm run prepare
-
-# Make hook executable
-chmod +x .husky/pre-commit
-
-# Verify hook exists
-cat .husky/pre-commit
-```
-
 ### Build Failing
 
 **Problem:** `pnpm run build` fails
@@ -617,7 +600,6 @@ import { Button } from '../../../components/ui/button';
 | `tsconfig.json`         | TypeScript strict mode settings |
 | `next.config.ts`        | Next.js build configuration     |
 | `.prettierrc`           | Code formatting rules           |
-| `.husky/pre-commit`     | Pre-commit hook script          |
 | `package.json`          | Scripts and dependencies        |
 | `.vscode/settings.json` | VS Code workspace settings      |
 
